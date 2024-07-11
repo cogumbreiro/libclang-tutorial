@@ -10,11 +10,13 @@ CMAKE = cmake
 
 EXE = $(BUILD_DIR)/bin/hello-world
 
+EXTRA =
+
 all: $(EXE)
 
 init:
 	@(test -d $(BUILD_DIR) || mkdir -p $(BUILD_DIR))
-	@(test -f $(BUILD_DIR)/CMakeCache.txt || cmake -DCMAKE_BUILD_TYPE=Release -S . -B $(BUILD_DIR))
+	(test -f $(BUILD_DIR)/CMakeCache.txt || cmake $(EXTRA) -DCMAKE_BUILD_TYPE=Release -S . -B $(BUILD_DIR))
 
 $(EXE): init $(SRC)
 	cmake --build $(BUILD_DIR)
