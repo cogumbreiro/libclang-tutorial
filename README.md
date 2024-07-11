@@ -4,6 +4,8 @@ A simple project that depends on libclang, following:
 
 https://clang.llvm.org/docs/LibASTMatchersTutorial.html
 
+Tested with: LLVM-15.0 up to LLVM-19.0
+
 # Instructions for macOS
 
 ```

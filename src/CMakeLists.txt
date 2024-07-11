@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.9)
 
 find_package(LLVM REQUIRED)
+find_package(LibClang REQUIRED)
 find_package(Clang REQUIRED)
 
 find_package(PkgConfig)
