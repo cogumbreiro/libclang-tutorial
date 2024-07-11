@@ -7,6 +7,8 @@ MACRO(FIND_AND_ADD_CLANG_LIB _libname_)
 find_library(CLANG_${_libname_}_LIB NAMES ${_libname_} PATHS ${LLVM_LIB_DIR} ${CLANG_LIB_DIR} NO_DEFAULT_PATH)
 if (CLANG_${_libname_}_LIB)
    set(CLANG_LIBS ${CLANG_LIBS} ${CLANG_${_libname_}_LIB})
+else()
+   message(STATUS "Could not find library: ${_libname_} in ${CLANG_LIB_DIR}")
 endif(CLANG_${_libname_}_LIB)
 ENDMACRO(FIND_AND_ADD_CLANG_LIB)
 
