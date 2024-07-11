@@ -1,3 +1,4 @@
+LDFLAGS=-stdlib=libc++
 
 BUILD_DIR = build
 
