@@ -10,6 +10,6 @@ Tested with: LLVM-15.0 up to LLVM-19.0
 
 ```
 $ brew install llvm@15 cmake pkg-config zstd
-$ export PATH="/usr/local/opt/llvm@15/bin:$PATH"
+$ export PATH="$HOMEBREW_PREFIX/opt/llvm@15/bin:$PATH"
 $ make
 ```
